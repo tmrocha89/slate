@@ -1,0 +1,11 @@
+version: '2'
+services:
+  slate:
+    image: tmrocha89/slate:latest
+    container_name: slate
+    ports:
+      - 4567:4567
+    volumes:
+      - ./source:/source
+      - ./build:/build
+    restart: unless-stopped
